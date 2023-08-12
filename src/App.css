@@ -1,38 +1,406 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.NavWrapper {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.HomePage,
+.CartPage {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ .NavItem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #8D8F91;
+}
+ 
+ .NavIcon {
+    font-size: 28px;
+    margin-bottom: 4px;
+    color: #8D8F91;
+}
+
+
+
+.RestaurantHeader {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}
+
+.RestaurantHeader .HeaderImg {
+    width: 100%;
+    height: 200px;
+}
+
+.RestaurantHeader .HeaderImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.RestaurantHeader .HeaderDetails {
+    width: 92%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    transform: translateY(-50%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 14px;
+}
+
+.RestaurantDetails {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.RestaurantNameLogo {
+    display: flex;
+    align-items: center;
+}
+
+.RestaurantNameLogo .RestaurantLogo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.RestaurantName span {
+    font-size: 14px;
+    color: #8D8F91;
+}
+
+
+.RestaurantShare .ShareIcon,
+.RestaurantShare .HeartIcon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.RestaurantShare .HeartIcon {
+    margin-left: 10px;
+}
+
+.HeaderDetails hr {
+    border: none;
+    border-bottom: 1px dashed #8D8F91;
+}
+
+.reviewDetails{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+}
+.reviewDetails p{
+    font-size: 14px;
+    
+}
+.reviewDetails p span{
+    font-size: 12px;
+    color: #8D8F91;
+}
+.reviewDetails .left{
+    flex-basis: 56%;
+}
+
+.reviewDetails .left hr{
+    margin: 6px 0;
+    border-bottom: 1px solid #8D8F91;
+}
+
+.reviewDetails .left .review{
+    display: flex;
+    align-items: center;
+}
+.reviewDetails .left .starIcon{
+    background-color: #277D2A;
+    color: white;
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 16px;
+    margin-right: 6px;
+}
+.reviewDetails .right{
+    flex-basis: 40%;
+    border-left: 1px solid #8D8F91;
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.right .location , .right .time{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.location .locationIcon, .time .timeIcon{
+    margin-right: 10px;
+    color: #FF8D2F ;
+}
+.time::before{
+    content: '';
+    height: 18px;
+    position: relative;
+    border-left: 1px dashed #FF8D2F;
+    bottom: 16px;
+    left: 8px;
+    /* width: 10px; */
+}
+
+.ItemCard, .noItems {
+    margin: auto;
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+}
+.ItemDetail{
+    width: 100%;
+}
+.ItemDetail span{
+    color: #FF8D2F;
+}
+.ItemCard .ItemDetail hr {
+    margin: 6px 0;
+    width: 94%;
+    border: none;
+    border-bottom: 1px dashed #8D8F91;
+}
+
+.ItemCard .ItemImgAndBtn img {
+    width: 140px;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.ItemImgAndBtn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btns {
+    transform: translateY(-50%);
+
+}
+
+ .btns button, .CartItemBtns button {
+    height: 30px;
+    cursor: pointer;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+}
+
+.qntyBtn {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #FF8D2F;
+    border-radius: 4px;
+}
+
+.addToCartBtn {
+    background-color: rgb(255, 255, 255) !important;
+    border: 2px solid #FF8D2F !important;
+}
+
+.qntyBtn p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.CartTotal {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(52, 52, 52, 1) 100%);
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 14px;
+    color: white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.CartTotal button {
+    padding: 10px 20px;
+    background-color: #FF8D2F;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cartItemsWrapper, .ItemList{
+    padding: 20px 0 100px 0;
+}
+
+
+.cartCard  {
+    padding: 14px;
+    width: 92%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 244, 235, 1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(255, 244, 235, 1);
+    box-shadow: 0px 0px 15px 0px rgba(255, 244, 235, 1);
+    border: 1px solid whitesmoke;
+    border-radius: 8px;
+    background-color: white;
+
+}
+.cartItemDetails{
+    width: 100%;
+}
+.cartCard  img {
+    width: 90px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.CartItemBtns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    border-radius: 4px;
+}
+
+
+.deleteBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 10px !important;
+    border: 2px solid #FF8D2F !important;
+    color: #FF8D2F;
+    border-radius: 4px;
+    background-color: #fff9f4 !important;
+    font-size: 20px;
+
+}
+.emptyCart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(50%);
+}
+.emptyCart img{
+max-width: 260px;
+width: 100%;
+margin-bottom: 20px;
+
+}
+
+/* ========================= Login Page ========================= */
+.AccountPage{
+    background-color: #fffaf6;
+    width: 100%;
+    height: 100vh;
+}
+.loginContainer{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 360px;
+    position: absolute;
+    width: 92%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.loginContainer p{
+    margin-bottom: 20px;
+}
+.loginContainer input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding:  10px;
+    border: 1px solid #8D8F91;
+    outline: none;
+    border-radius: 4px;
+
+}
+.loginContainer button{
+    width: 100%;
+    margin-bottom: 20px;
+    padding:  10px;
+    outline: none;
+    background-color: #FF8D2F;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ========================= Search Bar ========================= */
+.SearchBar{
+    width: 92% ;
+    padding: 10px;
+    display: flex;
+    border: 1px solid #8D8F91;
+    align-items: center;
+    margin: -60px auto 30px auto;
+    border-radius: 4px;
+    background-color: #fff;
+    z-index: 2;
+}
+.SearchBar input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
 }
